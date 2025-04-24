@@ -1,0 +1,57 @@
+/* Navbar.module.css */
+
+.navbar {
+  background-color: #0a0a0a0a;
+  padding: 1rem; /* Reduje el padding general para pantallas pequeñas */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap; /* Permito que los elementos se envuelvan */
+}
+
+.logo {
+  font-size: 1.25rem; /* Reduje el tamaño del logo en pantallas pequeñas */
+  font-weight: bold;
+  margin-right: 1rem; /* Agregué un margen derecho para separarlo del menú en pantallas pequeñas */
+}
+
+.logo a {
+  color: rgb(32, 248, 17);
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Reduje el gap entre los elementos del menú */
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #80fb61;
+}
+
+/* Media Query para pantallas más pequeñas (ej. móviles) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Apilo el logo y el menú verticalmente */
+    align-items: flex-start; /* Alineo a la izquierda */
+  }
+
+  .menu {
+    width: 100%; /* El menú ocupa todo el ancho */
+    margin-top: 0.5rem; /* Espacio entre el logo y el menú */
+    justify-content: flex-start; /* Alinea los items a la izquierda */
+    gap: 0.5rem;
+  }
+}
