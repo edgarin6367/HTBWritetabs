@@ -2,7 +2,7 @@
   "name": "hackthebox-writeups",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://edgarin6367.github.io/HTBWritetabs/",
+  "homepage": "https://edgarin6367.github.io/HTBWritetabs/",
   "type": "module",
 "scripts": {
   "predeploy": "npm run build",
