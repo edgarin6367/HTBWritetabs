@@ -21,7 +21,7 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0; /* Asegurar que no haya márgenes inesperados */
   padding: 0;
 }
@@ -37,8 +37,8 @@ body {
 /* Estilos del contenedor principal */
 div > h1 {
   font-size: 1.8rem; /* Revertí al tamaño original */
-  text-align: left;
-  margin-bottom: 1rem;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 div > input[type="text"] {
@@ -55,16 +55,16 @@ div > input[type="text"] {
 div > input[type="text"]:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0.25rem rgba(12, 184, 232, 0.25);
+  box-shadow: 0 0 0.25rem rgb(12, 184, 232);
 }
 
 main.writeups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Revertí al tamaño original */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 1.25rem;
   margin: 1rem auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 100vw;
 }
 
 
@@ -117,6 +117,7 @@ main.writeups-grid {
   background: radial-gradient(circle, var(--bg), transparent 65%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .card > * {
@@ -182,12 +183,15 @@ main.writeups-grid {
   box-shadow: 0 0.5rem 1rem rgba(97, 218, 251, 0.3);
 }
 
+
 /* Media Query para pantallas más pequeñas (ej. móviles) */
 @media (max-width: 600px) {
   main.writeups-grid {
     grid-template-columns: 1fr;
   }
-
+  .card{
+    aspect-ratio: auto;
+  }
   div > h1 {
     font-size: 1.5rem; /* Revertí a un tamaño intermedio */
   }

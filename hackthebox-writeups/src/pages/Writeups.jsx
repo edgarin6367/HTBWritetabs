@@ -12,7 +12,7 @@ function Writeups() {
   );
 
   return (
-    <div>
+    <div className="writeups-search-container">
       <h1>Lista de Writeups</h1>
       <input 
         type="text" 
@@ -22,18 +22,16 @@ function Writeups() {
       />
       <main className="writeups-grid">
         {filteredWriteups.map(writeup => (
-          <div key={writeup.id} className="card">
-            <div className="card-icon">
-              {writeup.title}
-            </div>
+          <Link to={`/writeup/${writeup.id}`} key={writeup.id} className="card-link">
+          <div className="card">
+            <div className="card-icon">{writeup.title}</div>
             <div className="card-details">
               <p className="card-machine">Máquina: {writeup.machine}</p>
               <p className="card-description">{writeup.description}</p>
             </div>
-            <Link to={`/writeup/${writeup.id}`} className="read-more-button">
-              Leer más
-            </Link>
+            <div className="read-more-button">Leer más</div>
           </div>
+          </Link>
         ))}
       </main>
     </div>
