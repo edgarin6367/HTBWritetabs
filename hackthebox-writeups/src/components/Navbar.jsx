@@ -10,7 +10,7 @@ function Navbar() {
       </div>
       <ul className={styles.menu}> {/* Aplica la clase 'menu' */}
         <li>
-          <Link to="/inicio">Inicio</Link>  {/* Enlace a la página de Inicio */}
+          <Link to="/home">Inicio</Link>  {/* Enlace a la página de Inicio */}
         </li>
         <li>
           <Link to="/writeups">Writeups</Link> {/* Enlace a la página de la Lista de Writeups */}

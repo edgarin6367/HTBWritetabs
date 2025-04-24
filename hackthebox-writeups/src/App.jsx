@@ -10,12 +10,13 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/writeups" element={<Writeups />} />
         <Route path="/writeup/:id" element={<WriteupDetail />} /> {/* Ruta para la página de detalles */}
       </Routes>
     </BrowserRouter>
   );
 }
+
 
 export default App;
